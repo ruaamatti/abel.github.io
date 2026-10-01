@@ -1483,12 +1483,45 @@ tbody tr:last-child td {
   }
 }
 
-/* Reduce transitions and scrolling motion when requested. */
+/* Reveal elements only after JavaScript has set up the observer. */
+.has-reveal-animations .reveal {
+  opacity: 0;
+  transition:
+    opacity var(--reveal-duration, 650ms) ease var(--reveal-delay, 0ms),
+    translate var(--reveal-duration, 650ms) cubic-bezier(0.2, 0.7, 0.2, 1)
+      var(--reveal-delay, 0ms);
+}
+
+.has-reveal-animations .reveal--up {
+  translate: 0 24px;
+}
+
+.has-reveal-animations .reveal--from-left {
+  translate: -28px 0;
+}
+
+.has-reveal-animations .reveal--from-right {
+  translate: 28px 0;
+}
+
+.has-reveal-animations .reveal.is-visible {
+  opacity: 1;
+  translate: 0 0;
+}
+
+/* Reduced-motion preferences always show content without movement. */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
   *::after {
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
+  }
+
+  .has-reveal-animations .reveal,
+  .has-reveal-animations .reveal.is-visible {
+    opacity: 1;
+    translate: none;
+    transition: none;
   }
 }

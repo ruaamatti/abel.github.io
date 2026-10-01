@@ -42,3 +42,93 @@ document.querySelectorAll("[data-preview-button]").forEach((button) => {
     preview.hidden = isExpanded;
   });
 });
+
+// Change these settings to enable reveals, adjust timing, or choose which
+// page elements enter from the bottom, left, or right.
+const revealSettings = {
+  enabled: true,
+  duration: 650,
+  stagger: 85,
+  threshold: 0.14,
+  directions: {
+    up: [
+      ".home-hero .hero-copy",
+      ".page-heading",
+      ".section-heading",
+      ".sample-notice",
+      ".leaderboard-main > .section-last .table-scroll",
+    ],
+    "from-left": [
+      ".purpose-layout > div",
+      ".info-card:nth-child(odd)",
+      ".team-card:nth-child(odd)",
+      ".progress-card:nth-child(odd)",
+      ".video-card:nth-child(odd)",
+      ".rule-section:nth-of-type(odd)",
+      ".performer-card:nth-child(odd)",
+      ".resource-card:nth-child(odd)",
+      ".faq-item:nth-child(odd)",
+    ],
+    "from-right": [
+      ".hero-mark",
+      ".purpose-copy",
+      ".info-card:nth-child(even)",
+      ".team-card:nth-child(even)",
+      ".progress-card:nth-child(even)",
+      ".video-card:nth-child(even)",
+      ".rule-section:nth-of-type(even)",
+      ".performer-card:nth-child(even)",
+      ".resource-card:nth-child(even)",
+      ".faq-item:nth-child(even)",
+    ],
+  },
+};
+
+const prefersReducedMotion = window.matchMedia(
+  "(prefers-reduced-motion: reduce)"
+).matches;
+
+if (
+  revealSettings.enabled &&
+  !prefersReducedMotion &&
+  "IntersectionObserver" in window
+) {
+  const revealElements = new Set();
+
+  Object.entries(revealSettings.directions).forEach(([direction, selectors]) => {
+    selectors.forEach((selector) => {
+      document.querySelectorAll(selector).forEach((element, index) => {
+        if (revealElements.has(element)) return;
+
+        revealElements.add(element);
+        element.classList.add("reveal", `reveal--${direction}`);
+        element.style.setProperty(
+          "--reveal-duration",
+          `${revealSettings.duration}ms`
+        );
+        element.style.setProperty(
+          "--reveal-delay",
+          `${index * revealSettings.stagger}ms`
+        );
+      });
+    });
+  });
+
+  if (revealElements.size > 0) {
+    document.documentElement.classList.add("has-reveal-animations");
+
+    const revealObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        });
+      },
+      { threshold: revealSettings.threshold }
+    );
+
+    revealElements.forEach((element) => revealObserver.observe(element));
+  }
+}
