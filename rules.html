@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Learn how simulated phishing messages, reporting, and points work in the Red Herring Phishing Derby.">
+    <title>Rules | Red Herring Phishing Derby</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <!-- Shared site header and navigation -->
+    <header class="site-header"><div class="header-inner"><a class="brand" href="index.html" aria-label="Red Herring Phishing Derby home"><img class="brand-logo" src="images/redherring_logo.png" alt="Navy fishing pole with a red bobber"><span class="brand-name">Red Herring <span>Phishing Derby</span></span></a><button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="site-navigation"><span class="menu-lines" aria-hidden="true"></span></button><nav class="site-nav" id="site-navigation" aria-label="Main navigation"><a href="index.html">Home</a><a href="about.html">About</a><a href="rules.html" aria-current="page">Rules</a><a href="leaderboard.html">Leaderboard</a><a href="contact.html">Contact Us</a></nav></div></header>
+
+    <!-- Rules explain how to participate, report, and earn points -->
+    <main class="content-width page-main rules-main">
+      <header class="page-heading"><p class="eyebrow">How to participate</p><h1>Derby rules</h1><p>Practice the same careful habits you would use with any unexpected email. The derby is a learning activity, not a test of personal information.</p></header>
+      <section class="rule-section" aria-labelledby="intro-title"><div class="rule-heading"><span class="rule-step">01</span><h2 id="intro-title">What to expect</h2></div><p>During the campaign, participants will receive 2-3 simulated phishing emails. Treat every unexpected message the same way you would a real phishing attempt: pause, check the sender and message, avoid clicking unfamiliar links or opening unexpected attachments, and report anything suspicious.</p><p>These simulations are designed for awareness and practice. If you interact with one, use it as a chance to learn and complete the recommended training.</p></section>
+      <section class="rule-section" aria-labelledby="report-title"><div class="rule-heading"><span class="rule-step">02</span><h2 id="report-title">How to report</h2></div><p>In Outlook, select the suspicious message and use the built-in phishing reporting option:</p><div class="report-path" aria-label="Outlook, then Report, then Report Phishing"><span>Outlook</span><span class="path-arrow" aria-hidden="true">&#8594;</span><span>Report</span><span class="path-arrow" aria-hidden="true">&#8594;</span><strong>Report Phishing</strong></div><p>Do not reply to the message or forward it to other participants. If you are unsure whether an email is part of the simulation, report it through your organization’s usual process.</p></section>
+      <section class="rule-section" aria-labelledby="scoring-title"><div class="rule-heading"><span class="rule-step">03</span><h2 id="scoring-title">Scoring system</h2></div><p>Everyone starts with 100 points. Points reflect safe choices and reporting during the campaign.</p><div class="table-scroll"><table class="scoring-table"><caption>Points for each simulated phishing email</caption><thead><tr><th scope="col">Action</th><th scope="col">Points</th></tr></thead><tbody><tr><td>Report a phishing email</td><td><span class="point-value point-positive">+20</span></td></tr><tr><td>Do not report and do not click</td><td><span class="point-value">0</span></td></tr><tr><td>Click a phishing link</td><td><span class="point-value point-negative">-25</span></td></tr><tr><td>Complete training after clicking</td><td><span class="point-value point-positive">+10</span></td></tr></tbody></table></div></section>
+      <!-- Bonus points are separate from the per-message scoring table -->
+      <section class="rule-section section-last" aria-labelledby="bonus-title"><div class="rule-heading"><span class="rule-step">04</span><h2 id="bonus-title">Bonus points</h2></div><div class="bonus-grid"><article class="bonus-card bonus-streak"><p class="bonus-value">+5</p><h3>Consecutive reporting streak</h3><p>Earn 5 points for each consecutive phishing email reported.</p></article><article class="bonus-card"><p class="bonus-rank">1st to report</p><p class="bonus-value">+24</p><h3>First person</h3></article><article class="bonus-card"><p class="bonus-rank">2nd to report</p><p class="bonus-value">+19</p><h3>Second person</h3></article><article class="bonus-card"><p class="bonus-rank">3rd to report</p><p class="bonus-value">+14</p><h3>Third person</h3></article><article class="bonus-card"><p class="bonus-rank">4th to report</p><p class="bonus-value">+9</p><h3>Fourth person</h3></article><article class="bonus-card"><p class="bonus-rank">5th to report</p><p class="bonus-value">+4</p><h3>Fifth person</h3></article></div><p class="small-note">Bonus points are awarded for each simulated message based on report timing.</p></section>
+    </main>
+
+    <!-- Shared footer appears on every page -->
+    <footer class="site-footer"><div class="footer-inner"><p class="footer-cohort">SDCOE ITS Internship Cohort 3</p><p>Red Herring Phishing Derby</p><p>Educational Demonstration Website</p><p class="footer-copyright">Copyright &copy; SDCOE</p></div></footer>
+  </body>
+</html>

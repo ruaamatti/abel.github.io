@@ -1,13 +1,87 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Red Herring Phishing Derby</title>
-</head>
-<body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Learn to recognize phishing attempts through the Red Herring Phishing Derby, an intern-led cybersecurity awareness program.">
+    <title>Red Herring Phishing Derby | Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <!-- Shared site header and navigation -->
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="index.html" aria-label="Red Herring Phishing Derby home">
+          <img class="brand-logo" src="images/redherring_logo.png" alt="Navy fishing pole with a red bobber">
+          <span class="brand-name">Red Herring <span>Phishing Derby</span></span>
+        </a>
+        <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="site-navigation">
+          <span class="menu-lines" aria-hidden="true"></span>
+        </button>
+        <nav class="site-nav" id="site-navigation" aria-label="Main navigation">
+          <a href="index.html" aria-current="page">Home</a>
+          <a href="about.html">About</a>
+          <a href="rules.html">Rules</a>
+          <a href="leaderboard.html">Leaderboard</a>
+          <a href="contact.html">Contact Us</a>
+        </nav>
+      </div>
+    </header>
 
-<h1>Home</h1>
-<p>This is the home page.</p>
-Ivan
+    <!-- The home page introduces the program and its purpose -->
+    <main>
+      <section class="home-hero content-width" aria-labelledby="home-title">
+        <div class="hero-copy">
+          <p class="eyebrow">A cybersecurity awareness challenge</p>
+          <h1 id="home-title">Red Herring<br>Phishing Derby</h1>
+          <p class="hero-summary">Learn to recognize phishing attempts and improve cybersecurity awareness through friendly competition.</p>
+          <div class="button-row">
+            <a class="button button-primary" href="about.html">Learn About the Derby</a>
+            <a class="button button-secondary" href="leaderboard.html">View Leaderboard</a>
+          </div>
+        </div>
+        <div class="hero-mark" aria-hidden="true">
+          <img src="images/redherring_logo.png" alt="">
+          <p>Pause. Check. Report.</p>
+        </div>
+      </section>
 
-</body>
+      <!-- Explain why the intern team created the derby -->
+      <section class="section-band" aria-labelledby="purpose-title">
+        <div class="content-width purpose-layout">
+          <div>
+            <p class="eyebrow">Our project</p>
+            <h2 id="purpose-title">Practice makes safer inboxes</h2>
+          </div>
+          <p class="purpose-copy">The Red Herring Phishing Derby is a cybersecurity awareness initiative designed to help participants identify phishing emails and build safer email habits through practical experience and friendly competition.</p>
+        </div>
+      </section>
+
+      <!-- A quick, informational overview of the program -->
+      <section class="content-width section-space" aria-labelledby="overview-title">
+        <div class="section-heading">
+          <p class="eyebrow">At a glance</p>
+          <h2 id="overview-title">Project overview</h2>
+        </div>
+        <div class="overview-grid">
+          <article class="info-card"><span class="card-index">01</span><p class="card-value">150+</p><h3>Participants</h3><p>Designed for a broad learning community.</p></article>
+          <article class="info-card"><span class="card-index">02</span><p class="card-value">2-3</p><h3>Simulated phishing emails</h3><p>Practice spotting suspicious messages.</p></article>
+          <article class="info-card"><span class="card-index">03</span><p class="card-value">Learn</p><h3>Awareness program</h3><p>Build practical cybersecurity knowledge.</p></article>
+          <article class="info-card"><span class="card-index">04</span><p class="card-value">ITS</p><h3>Intern-led initiative</h3><p>Created and managed by ITS interns.</p></article>
+        </div>
+        <p class="small-note">Program figures are informational estimates.</p>
+      </section>
+    </main>
+
+    <!-- Shared footer appears on every page -->
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <p class="footer-cohort">SDCOE ITS Internship Cohort 3</p>
+        <p>Red Herring Phishing Derby</p>
+        <p>Educational Demonstration Website</p>
+        <p class="footer-copyright">Copyright &copy; SDCOE</p>
+      </div>
+    </footer>
+  </body>
 </html>
