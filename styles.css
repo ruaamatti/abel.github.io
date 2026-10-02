@@ -1559,3 +1559,115 @@ tbody tr:last-child td {
 .rules-main .bonus-streak {
     border: 3px solid rgb(12, 12, 54);
 }
+
+/* Derby Score Calculator */ 
+
+.derby-calculator { 
+
+  max-width: 720px; 
+
+  margin: 2rem auto; 
+
+  padding: 1.5rem; 
+
+  background: #ffffff; 
+
+  border: 2px solid #007c83; 
+
+  border-radius: 16px; 
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12); 
+
+} 
+
+ 
+
+.calculator-field { 
+
+  display: grid; 
+
+  grid-template-columns: 1fr 110px; 
+
+  gap: 1rem; 
+
+  align-items: center; 
+
+  margin-bottom: 0.75rem; 
+
+} 
+
+ 
+
+.calculator-field input { 
+
+  padding: 0.65rem; 
+
+  border: 1px solid #87929d; 
+
+  border-radius: 8px; 
+
+  font-size: 1rem; 
+
+} 
+
+ 
+
+#calculate-score { 
+
+  margin-top: 1rem; 
+
+  padding: 0.8rem 1.2rem; 
+
+  background: #007c83; 
+
+  color: white; 
+
+  border: 0; 
+
+  border-radius: 8px; 
+
+  font-weight: 700; 
+
+  cursor: pointer; 
+
+} 
+
+ 
+
+#calculate-score:hover, 
+
+#calculate-score:focus { 
+
+  background: #17324d; 
+
+} 
+
+ 
+
+.score-result { 
+
+  margin-top: 1rem; 
+
+  padding: 1rem; 
+
+  background: #eaf5f6; 
+
+  border-radius: 10px; 
+
+  font-size: 1.25rem; 
+
+  font-weight: 700; 
+
+} 
+
+ 
+
+@media (max-width: 600px) { 
+
+  .calculator-field { 
+
+    grid-template-columns: 1fr; 
+
+  } 
+
+} 
