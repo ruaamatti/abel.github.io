@@ -132,3 +132,60 @@ if (
     revealElements.forEach((element) => revealObserver.observe(element));
   }
 }
+function calculateDerbyScore() { 
+
+  let score = 100; 
+
+ 
+
+  const reported = getNumber('reported-count'); 
+
+  const clicked = getNumber('clicked-count'); 
+
+  const training = getNumber('training-count'); 
+
+  const streak = getNumber('streak-count'); 
+
+  const first = getNumber('first-count'); 
+
+  const second = getNumber('second-count'); 
+
+  const third = getNumber('third-count'); 
+
+  const fourth = getNumber('fourth-count'); 
+
+  const fifth = getNumber('fifth-count'); 
+
+ 
+
+  score += reported * 20; 
+
+  score -= clicked * 25; 
+
+  score += training * 10; 
+
+  score += streak * 5; 
+
+  score += first * 24; 
+
+  score += second * 19; 
+
+  score += third * 14; 
+
+  score += fourth * 9; 
+
+  score += fifth * 4; 
+
+ 
+
+  document.getElementById('score-total').textContent = score; 
+
+} 
+
+ 
+
+document 
+
+  .getElementById('calculate-score') 
+
+  .addEventListener('click', calculateDerbyScore); 
