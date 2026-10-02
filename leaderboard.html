@@ -96,6 +96,64 @@
                 </table>
             </div>
         </section>
+
+        <section class="derby-calculator"> 
+
+  <h2>Derby Score Calculator</h2> 
+
+  <p>Enter your activity to estimate your score.</p> 
+
+  <!-- Calculator fields go here --> 
+<div class="calculator-field"> 
+  <label for="reported-count">Phishing emails reported</label> 
+  <input type="number" id="reported-count" min="0" value="0"> 
+</div> 
+
+<div class="calculator-field"> 
+  <label for="clicked-count">Phishing links clicked</label> 
+  <input type="number" id="clicked-count" min="0" value="0"> 
+</div> 
+            
+<div class="calculator-field"> 
+  <label for="training-count">Training videos completed</label> 
+  <input type="number" id="training-count" min="0" value="0"> 
+</div>
+
+<div class="calculator-field"> 
+  <label for="streak-count">Training videos completed</label> 
+  <input type="number" id="streak-count" min="0" value="0"> 
+</div>
+<div class="calculator-field"> 
+  <label for="first-count">Training videos completed</label> 
+  <input type="number" id="first-count" min="0" value="0"> 
+</div>
+<div class="calculator-field"> 
+  <label for="second-count">Training videos completed</label> 
+  <input type="number" id="second-count" min="0" value="0"> 
+</div>
+<div class="calculator-field"> 
+  <label for="third-count">Training videos completed</label> 
+  <input type="number" id="third-count" min="0" value="0"> 
+</div>
+<div class="calculator-field"> 
+  <label for="fourth-count">Training videos completed</label> 
+  <input type="number" id="fourth-count" min="0" value="0"> 
+</div>
+<div class="calculator-field"> 
+  <label for="fifth-count">Training videos completed</label> 
+  <input type="number" id="fifth-count" min="0" value="0"> 
+</div>
+  <button type="button" id="calculate-score">Calculate Score</button> 
+
+ 
+
+  <div class="score-result" aria-live="polite"> 
+
+    Estimated Score: <span id="score-total">100</span> 
+
+  </div> 
+
+</section> 
     </main>
 
     <!-- Shared footer appears on every page -->
