@@ -132,6 +132,11 @@ if (
     revealElements.forEach((element) => revealObserver.observe(element));
   }
 }
+function getNumber(id) { 
+
+  return Number(document.getElementById(id).value) || 0; 
+
+} 
 function calculateDerbyScore() { 
 
   let score = 100; 
