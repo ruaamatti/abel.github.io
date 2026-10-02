@@ -47,7 +47,7 @@ document.querySelectorAll("[data-preview-button]").forEach((button) => {
 // page elements enter from the bottom, left, or right.
 const revealSettings = {
   enabled: true,
-  duration: 650,
+  duration: 2000,
   stagger: 85,
   threshold: 0.14,
   directions: {
